@@ -8,7 +8,6 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: black;
   color: white;
   position: relative;
 `
@@ -21,15 +20,17 @@ const BackgroundImage = styled.div`
   right: 0;
   width: 100%;
   height: auto;
-  background-image: url("./wald.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-
+  background-color: black;
+  opacity: 0.6;
 `
 
-const Lol = styled.div`
+const Title = styled.div`
   position: relative;
+  @media (min-width: 600px) {
+    position: absolute;
+    top: -94px;
+    left: 20px;
+  };
 `
 
 
@@ -38,9 +39,9 @@ class Home extends Component {
     return (
       <Wrapper>
         <BackgroundImage className="background"/>
-        <Lol className="home">
+        <Title className="home">
           <h1>Lorenz 🍔</h1>
-        </Lol>
+        </Title>
       </Wrapper>
     )
   }
