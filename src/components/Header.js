@@ -56,8 +56,8 @@ const Fader = styled.div`
 `
 
 class Header extends Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
     this.state = {
       do: false,
       did: false,
@@ -67,14 +67,20 @@ class Header extends Component {
 
   handleDoClick () {
     this.setState({ do: !this.state.do })
+    this.setState({ did: false })
+    this.setState({ contacted: false })
   }
 
   handleDidClick () {
     this.setState({ did: !this.state.did })
+    this.setState({ do: false })
+    this.setState({ contacted: false })
   }
 
   handleContactedClick () {
     this.setState({ contacted: !this.state.contacted })
+    this.setState({ do: false })
+    this.setState({ did: false })
   }
 
   render() {
@@ -84,7 +90,7 @@ class Header extends Component {
     return (
       <HeaderWrap>
         <BackgroundImage />
-        <Fader className='Fader'>
+        <Fader>
           <HeaderElement>
             <p onClick={this.handleDoClick.bind(this)}>WHAT I DO</p>
           </HeaderElement>

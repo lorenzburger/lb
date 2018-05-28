@@ -4,6 +4,8 @@ import styled from 'styled-components'
 import Home from './views/home'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import WhatIDo from './components/WhatIDo'
+
 import './index.css'
 import { HashRouter as Router, Route } from 'react-router-dom'
 
@@ -23,6 +25,7 @@ const App = () => (
     <Wrapper>
       <Header />
       <Home />
+    
       <Footer />
     </Wrapper>
   </Router>
