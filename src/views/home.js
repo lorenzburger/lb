@@ -23,24 +23,12 @@ const BackgroundImage = styled.div`
   opacity: 0.6;
 `
 
-const Title = styled.div`
-  position: relative;
-  @media (min-width: 600px) {
-    position: absolute;
-    top: -94px;
-    left: 20px;
-  };
-`
-
-
 class Home extends Component {
+
   render() {
     return (
       <Wrapper>
         <BackgroundImage className="background"/>
-        <Title className="home">
-          <h1>Lorenz 🍔</h1>
-        </Title>
       </Wrapper>
     )
   }

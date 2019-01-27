@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
 const HeaderWrap = styled.div`
@@ -19,22 +20,25 @@ const BackgroundImage = styled.div`
   opacity: 0.6;
 `
 
-const HeaderElement = styled.div`
+const HeaderContainer = styled.div`
+  flex: 1;
   display: flex;
-  color: white;
-  font-weight: 800;
-  margin: 10px 30px 10px 0px;
+  flex-direction: row;
+  justify-content: space-between;
   @media (max-width: 600px) {
-    margin: 10px 0px 10px 0px;
+    flex-direction: row;
+    justify-content: space-around;
   };
-  transition: all 0.5s ease;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+  padding-top: 10px;
 `
 
 const Fader = styled.div`
   flex: 1;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   @media (max-width: 600px) {
     flex-direction: row;
     justify-content: space-around;
@@ -43,64 +47,77 @@ const Fader = styled.div`
   padding-bottom: 10px;
   padding-top: 10px;
   &:hover {
-    div {
-      opacity: 0.6;
+    a {
+      opacity: 0.3;
     }
   }
-  div {
+  a {
     &:hover {
       opacity: 1;
-      cursor: pointer
+      cursor: pointer;
     }
   }
 `
 
+const Title = styled.div`
+  padding-left: 2%;
+  display: flex;
+  flex-wrap: nowrap;
+`
+
+const Burger = styled(Link)`
+  display: flex;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px 30px 10px 0px;
+`
+
+const Menu = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`
+
+const HeaderElement = styled(Link)`
+  display: flex;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  margin: 10px 30px 10px 0px;
+  @media (max-width: 600px) {
+    margin: 10px 0px 10px 0px;
+  };
+  :active {
+    transform: scale(0.9, 0.9);
+  }
+`
+
 class Header extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      do: false,
-      did: false,
-      contacted: false
-    }
-  }
-
-  handleDoClick () {
-    this.setState({ do: !this.state.do })
-    this.setState({ did: false })
-    this.setState({ contacted: false })
-  }
-
-  handleDidClick () {
-    this.setState({ did: !this.state.did })
-    this.setState({ do: false })
-    this.setState({ contacted: false })
-  }
-
-  handleContactedClick () {
-    this.setState({ contacted: !this.state.contacted })
-    this.setState({ do: false })
-    this.setState({ did: false })
-  }
-
   render() {
-    console.log(this.state.do)
-    console.log(this.state.did)
-    console.log(this.state.contacted)
     return (
       <HeaderWrap>
         <BackgroundImage />
-        <Fader>
-          <HeaderElement>
-            <p onClick={this.handleDoClick.bind(this)}>WHAT I DO</p>
-          </HeaderElement>
-          <HeaderElement>
-            <p onClick={this.handleDidClick.bind(this)}>WHAT I DID</p>
-          </HeaderElement>
-          <HeaderElement>
-            <p onClick={this.handleContactedClick.bind(this)}>CONTACT</p>
-          </HeaderElement>
-        </Fader>
+        <HeaderContainer>
+          <Title>
+            <Burger to='/'>
+              <p>LORENZ 🍔</p>
+            </Burger>
+          </Title>
+          <Menu>
+            <Fader>
+              <HeaderElement to='/whatido'>
+                <p>WHAT I DO</p>
+              </HeaderElement>
+              <HeaderElement to='/whatidid'>
+                <p>WHAT I DID</p>
+              </HeaderElement>
+              <HeaderElement to='/whatido'>
+                <p>CONTACT</p>
+              </HeaderElement>
+            </Fader>
+          </Menu>
+        </HeaderContainer>
       </HeaderWrap>
     )
   }

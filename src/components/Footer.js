@@ -20,6 +20,30 @@ const BackgroundImage = styled.div`
   background-color: black;
   opacity: 0.6;
 `
+const Fader = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  @media (max-width: 600px) {
+    flex-direction: row;
+    justify-content: space-around;
+  };
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  &:hover {
+    a {
+      opacity: 0.3;
+    }
+  }
+  a {
+    &:hover {
+      opacity: 1;
+      cursor: pointer;
+    }
+  }
+`
 
 const FooterElement = styled.div`
   flex: 1;
@@ -27,21 +51,23 @@ const FooterElement = styled.div`
 
 export default () => <Footer>
   <BackgroundImage />
-  <FooterElement>
-    <SocialBadge
-      iconColor='white'
-      badgeColor='transparent'
-      url='http://github.com/lorenzburger'
-    />
-    <SocialBadge
-      iconColor='white'
-      badgeColor='transparent'
-      url='http://instagramm.com/lrnzbrgr'
-    />
-    <SocialBadge
-      iconColor='white'
-      badgeColor='transparent'
-      url='http://linkedin.com/in/lorenzburger'
-    />
-  </FooterElement>
+  <Fader>
+    <FooterElement>
+      <SocialBadge
+        iconColor='white'
+        badgeColor='transparent'
+        url='http://github.com/lorenzburger'
+      />
+      <SocialBadge
+        iconColor='white'
+        badgeColor='transparent'
+        url='http://instagramm.com/lrnzbrgr'
+      />
+      <SocialBadge
+        iconColor='white'
+        badgeColor='transparent'
+        url='http://linkedin.com/in/lorenzburger'
+      />
+    </FooterElement>
+  </Fader>
 </Footer>
