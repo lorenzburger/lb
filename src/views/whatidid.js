@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
+import Downloads from '../components/Downloads'
+
 const Wrapper = styled.div`
   flex: 1;
   display: flex;
@@ -22,21 +24,14 @@ const BackgroundImage = styled.div`
   background-color: black;
   opacity: 0.6;
 `
-const Cv = styled.div`
-  position: absolute;
-  right: -500px;
-  background: lightgrey;
-  width: 50vw;
-  height: 30vw;
-  opacity: 0.3;
-`
 
 class WhatIDid extends Component {
   render() {
     return (
       <Wrapper>
         <BackgroundImage className="background"/>
-        <Cv>yolo</Cv>
+        <span>CV</span>
+        <Downloads/>
       </Wrapper>
     )
   }

@@ -1,10 +1,11 @@
-import React from 'react'
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 import styled from 'styled-components'
 import Home from './views/home'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import Main from './components/Main'
+
 import WhatIDo from './views/whatido'
 import WhatIDid from './views/whatidid'
 
@@ -12,7 +13,6 @@ import './index.css'
 import { HashRouter as Router, Route } from 'react-router-dom'
 
 const Wrapper = styled.div`
-  position: relative;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -23,19 +23,51 @@ const Wrapper = styled.div`
   background-position: center;
 `
 
-const App = () => (
-  <Router>
-    <Wrapper>
-      <Header />
-      <Main>
-       <Route exact path="/" component={Home}/>
-       <Route exact path="/whatido" component={WhatIDo}/>
-       <Route exact path="/whatidid" component={WhatIDid}/>
-      </Main>
-      <Footer />
-    </Wrapper>
-  </Router>
-)
+class App extends Component {
+  state = {
+    bump: false,
+    slide: false
+  }
+
+  handleContactClick = () => {
+    this.setState({
+      bump: true
+    })
+  }
+
+  handleDidClick = () => {
+    this.setState({
+      bump: true
+    })
+  }
+
+  resetState = () => {
+    this.setState({
+      bump: false
+    })
+  }
+
+  render() {
+    return (
+      <Router>
+        <Wrapper>
+          <Header
+            contactClick={(e) => {this.handleContactClick()}}
+            otherClick={(e) => {this.resetState()}}
+            didClick={(e) => {this.handleDidClick()}}
+          />
+          <Main>
+           <Route exact path="/" component={Home}/>
+           <Route exact path="/whatido" component={WhatIDo}/>
+           <Route exact path="/whatidid" component={WhatIDid}/>
+          </Main>
+          <Footer bump={this.state.bump}/>
+        </Wrapper>
+      </Router>
+    )
+  }
+}
+
 export default App
 
 ReactDOM.render(

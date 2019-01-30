@@ -25,10 +25,19 @@ const BackgroundImage = styled.div`
   opacity: 0.6;
 `
 const Quote = styled.div`
-  font-family: 'PT Sans', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-self: center;
+  font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 26px;
   width: 50%;
+  @media (max-width: 600px) {
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
 `
 
 class WhatIDo extends Component {
