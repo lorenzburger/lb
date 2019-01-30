@@ -6,8 +6,11 @@ const Downloads = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  height: 80%;
-  background: transparent;
+  height: 90%;
+  @media (max-width: 600px) {
+    width: 100%;
+    height: 90%;
+  };
 `
 
 const InfoElement = styled.div`
@@ -16,12 +19,22 @@ const InfoElement = styled.div`
   flex-direction: row;
   justify-content: space-between;
   overflow-y: scroll;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  };
 `
 
 const Bio = styled.div`
   display: block;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
   padding: 5px 20px 5px 20px;
   width: 30%;
+  @media (max-width: 600px) {
+    width: 100%;
+  };
 `
 
 const Avatar = styled.img`
@@ -29,8 +42,13 @@ const Avatar = styled.img`
   width: 90px;
   height: 90px;
   border-radius: 50%;
+  margin-bottom: 20px;
   overflow: hidden;
   opacity: 0.6;
+  @media (max-width: 600px) {
+    width: 50px;
+    height: 50px;
+  };
 `
 
 const Info = styled.div`
@@ -39,9 +57,13 @@ const Info = styled.div`
   justify-content: space-between;
   padding: 5px 20px 5px 20px;
   width: 70%;
+  @media (max-width: 600px) {
+    width: 100%;
+  };
 `
 
 const InfoElementText = styled.span`
+  font-family: 'Open Sans', sans-serif;
   font-size: 13px;
   font-style: italic;
   margin-bottom: 40px;
@@ -55,8 +77,8 @@ const Icon = styled.svg`
   height: 48px;
   margin: 10px;
   @media (max-width: 600px) {
-    width: 20px;
-    height: 20px;
+    width: 40px;
+    height: 40px;
   };
 `
 

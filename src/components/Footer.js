@@ -39,7 +39,6 @@ const BackgroundImage = styled.div`
   bottom: 0;
   right: 0;
   width: 100%;
-  height: auto;
   background-color: black;
   opacity: 0.6;
 `
@@ -102,7 +101,7 @@ const StyledSocialBadge3 = styled(SocialBadge)`
       `${bounce} 0.8s normal forwards ease-in-out`
     :
       null
-};
+  };
 `
 const StyledSocialBadge4 = styled(SocialBadge)`
   opacity: ${props => props.bump ? 1 : 0};
@@ -113,7 +112,7 @@ const StyledSocialBadge4 = styled(SocialBadge)`
       `${bounceHigher} 0.6s normal forwards ease-in-out`
     :
       null
-};
+  };
 `
 
 export default (props) => <Footer>

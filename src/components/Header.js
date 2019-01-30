@@ -69,7 +69,6 @@ const Title = styled.div`
   flex: 1;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: baseline;
 `
 
 const Burger = styled(Link)`
@@ -79,13 +78,15 @@ const Burger = styled(Link)`
   @media (max-width: 600px) {
     margin: 0;
   }
-  margin: 10px 30px 10px 0px;
+  margin: 18px 30px 10px 0px;
 `
 
 const Menu = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-itmes: baseline;
+  width: 500px;
   @media (max-width: 600px) {
     width: 100%
   }
