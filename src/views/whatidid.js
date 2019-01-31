@@ -30,7 +30,6 @@ class WhatIDid extends Component {
     return (
       <Wrapper>
         <BackgroundImage className="background"/>
-        <span>CV</span>
         <Downloads/>
       </Wrapper>
     )

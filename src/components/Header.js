@@ -7,6 +7,7 @@ const HeaderWrap = styled.div`
   top: 0;
   left: 0;
   width: 100%;
+  display: flex;
 `
 
 const BackgroundImage = styled.div`
@@ -20,32 +21,22 @@ const BackgroundImage = styled.div`
   opacity: 0.6;
 `
 
-const HeaderContainer = styled.div`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-  padding-bottom: 10px;
-  padding-top: 10px;
-  @media (max-width: 600px) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  };
-`
-
 const Fader = styled.div`
-  flex: 1;
   display: flex;
+  flex-grow: 1;
   flex-direction: row;
   justify-content: space-between;
-  @media (max-width: 600px) {
-    flex-direction: row;
-    justify-content: space-around;
-  };
-  flex-wrap: nowrap;
+  align-items: center;
+  margin-top: 20px;
   padding-bottom: 10px;
   padding-top: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
+  @media (max-width: 600px) {
+    flex-direction: column;
+    justify-content: space-around;
+    width: 90%;
+  };
   &:hover {
     a {
       opacity: 0.3;
@@ -59,36 +50,31 @@ const Fader = styled.div`
   }
 `
 
-const Title = styled.div`
-  padding-left: 2%;
-    @media (max-width: 600px) {
-      padding: 0;
-      align-items: center;
-    }
-  display: flex;
-  flex: 1;
-  flex-direction: row;
-  flex-wrap: nowrap;
-`
-
 const Burger = styled(Link)`
+  @media (max-width: 600px) {
+    padding: 0;
+    margin: 0;
+  }
   color: white;
   font-weight: bold;
   text-decoration: none;
-  @media (max-width: 600px) {
-    margin: 0;
+  :active {
+    transform: scale(0.8, 0.8);
   }
-  margin: 18px 30px 10px 0px;
 `
 
 const Menu = styled.div`
   display: flex;
-  flex-direction: row;
+  width: 30%;
+  max-width: 250px;
   justify-content: space-between;
-  align-itmes: baseline;
-  width: 500px;
   @media (max-width: 600px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%
+    padding: 0;
+    max-width: none;
   }
 `
 
@@ -97,14 +83,13 @@ const HeaderElement = styled(Link)`
   color: white;
   font-weight: bold;
   text-decoration: none;
-  margin: 10px 30px 10px 0px;
   @media (max-width: 600px) {
-    margin: 0px 0px 10px 0px;
+    margin: 15px 20px 10px 20px;
     font-weight: 300;
-    font-size: 12px;
+    font-size: 14px;
   };
   :active {
-    transform: scale(0.9, 0.9);
+    transform: scale(0.8, 0.8);
   }
 `
 
@@ -114,26 +99,19 @@ class Header extends Component {
     return (
       <HeaderWrap>
         <BackgroundImage />
-        <HeaderContainer>
-          <Title onClick={this.props.otherClick}>
-            <Burger to='/'>
-              <p>LORENZ 🍔</p>
-            </Burger>
-          </Title>
+        <Fader>
+          <Burger to='/whatidid' onClick={this.props.otherClick}>
+            <p>LORENZ 🍔</p>
+          </Burger>
           <Menu>
-            <Fader>
-              <HeaderElement to='/whatido' onClick={this.props.otherClick}>
-                <p>PROJECTS</p>
-              </HeaderElement>
-              <HeaderElement to='/whatidid' onClick={this.props.otherClick}>
-                <p>CV</p>
-              </HeaderElement>
-              <HeaderElement to='/' onClick={this.props.contactClick}>
-                <p>CONTACT</p>
-              </HeaderElement>
-            </Fader>
+            <HeaderElement to='/whatido' onClick={this.props.otherClick}>
+              <p>PROJECTS</p>
+            </HeaderElement>
+            <HeaderElement to='/' onClick={this.props.contactClick}>
+              <p>CONTACT</p>
+            </HeaderElement>
           </Menu>
-        </HeaderContainer>
+        </Fader>
       </HeaderWrap>
     )
   }

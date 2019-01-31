@@ -26,98 +26,117 @@ const BackgroundImage = styled.div`
 const Quote = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-self: center;
+  align-self: flex-start;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   font-weight: bold;
   font-size: 26px;
-  width: 50%;
   @media (max-width: 600px) {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 500;
   }
 `
-const Icon = styled.svg`
-  align-self: center;
-  flex: none;
-  fill: white;
-  width: 88px;
-  height: 88px;
-  margin: 0;
-  opacity: 0;
+
+const Author = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-self: flex-end;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 26px;
+  margin-top: 15px;
+  padding-right: 30px;
   @media (max-width: 600px) {
-    width: 20px;
-    height: 20px;
-    margin: 0;
-    opacity: 1;
+    font-size: 16px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+`
+// const Icon = styled.svg`
+//   align-self: center;
+//   flex: none;
+//   fill: white;
+//   width: 88px;
+//   height: 88px;
+//   margin: 0;
+//   opacity: 0;
+//   @media (max-width: 600px) {
+//     width: 20px;
+//     height: 20px;
+//     margin: 0;
+//     opacity: 1;
+//   };
+// `
+
+const QuoteWrapper = styled.div`
+  display: inline-block;
+  align-self: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  @media (min-width: 1600px) {
+    width: 50%;
   };
 `
 
-const QuoteWrapper = styled.div`
-  display: flex;
-  align-self: center;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-`
+// const DoubleQuotesUp = styled.div`
+//   opacity: 0.3;
+//   margin-top: -30px;
+// `
 
-const DoubleQuotesUp = styled.div`
-  opacity: 0.3;
-  margin-top: -30px;
-`
+// const DoubleQuotesDown = styled.div`
+//   opacity: 0.3;
+//   transform: rotate(180deg);
+// `
 
-const DoubleQuotesDown = styled.div`
-  opacity: 0.3;
-  transform: rotate(180deg);
-`
+// const UpQuotes = () => {
+//   return (
+//     <DoubleQuotesUp>
+//       <Icon viewBox="0 0 10 17">
+//         <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
+//       </Icon>
+//       <Icon viewBox="0 0 10 17">
+//         <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
+//       </Icon>
+//     </DoubleQuotesUp>
+//   )
+// }
 
-const UpQuotes = () => {
-  return (
-    <DoubleQuotesUp>
-      <Icon viewBox="0 0 10 17">
-        <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
-      </Icon>
-      <Icon viewBox="0 0 10 17">
-        <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
-      </Icon>
-    </DoubleQuotesUp>
-  )
-}
-
-const DownQuotes = () => {
-  return (
-    <DoubleQuotesDown>
-      <Icon viewBox="0 0 10 17">
-        <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
-      </Icon>
-      <Icon viewBox="0 0 10 17">
-        <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
-      </Icon>
-    </DoubleQuotesDown>
-  )
-}
+// const DownQuotes = () => {
+//   return (
+//     <DoubleQuotesDown>
+//       <Icon viewBox="0 0 10 17">
+//         <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
+//       </Icon>
+//       <Icon viewBox="0 0 10 17">
+//         <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
+//       </Icon>
+//     </DoubleQuotesDown>
+//   )
+// }
 
 class WhatIDo extends Component {
 
-  quotize = (quotes) => {
-    const quote = quotes[Math.floor(Math.random()*quotes.length)];
-    return quote
-  }
+  quotize = (quotes) => quotes[Math.floor(Math.random()*quotes.length)];
 
   render() {
+    const quote = this.quotize(quotes)
     return (
       <Wrapper>
         <BackgroundImage className="background"/>
         <QuoteWrapper>
-          <UpQuotes />
-          <Quote>{this.quotize(quotes).quote}</Quote>
+          <Quote>{Object.values(quote)[0]}</Quote>
+          <Author>—{Object.keys(quote)[0]}</Author>
         </QuoteWrapper>
       </Wrapper>
     )
   }
 }
+
+  /*<UpQuotes />*/
 
 // <Icon viewBox="0 0 10 17">
 //   <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />

@@ -1,33 +1,23 @@
 export const quotes = [
   {
-    quote: "“Doing nothing is very hard to do... you never know when you're finished.”",
-    author: "Leslie Nielsen",
+    "Leslie Nielsen": "“Doing nothing is very hard to do... you never know when you're finished.”",
   }, {
-    quote: "“They say, timing is everything. But then they say, there is never a perfect time for anything.”",
-    author: "Anthony Liccione",
+    "Anthony Liccione": "“They say, timing is everything. But then they say, there is never a perfect time for anything.”",
   }, {
-    quote: "“Sometimes the most important thing to do is to do nothing.”",
-    author: "Debasish Mridha",
+    "Debasish Mridha": "“Sometimes the most important thing to do is to do nothing.”",
   }, {
-    quote: "“The only way to avoid failure is to sit in a corner and do nothing.”",
-    author: "Kevin Leman",
+    "Kevin Leman": "“The only way to avoid failure is to sit in a corner and do nothing.”",
   }, {
-    quote: "“I don't think necessity is the mother of invention. Invention arises directly from idleness, possibly also from laziness. To save oneself trouble.”",
-    author: "Agatha Christie",
+    "Agatha Christie": "“I don't think necessity is the mother of invention. Invention arises directly from idleness, possibly also from laziness. To save oneself trouble.”",
   }, {
-    quote: "“I've heard that hard work never killed anyone, but I say why take the chance?”",
-    author: "Ronald Reagan",
+    "Ronald Reagan": "“I've heard that hard work never killed anyone, but I say why take the chance?”",
   }, {
-    quote: "“Procrastination is my sin. It brings me naught but sorrow. I know that I should stop it. In fact, I will, tomorrow”",
-    author: "Gloria Pitzer",
+    "Gloria Pitzer": "“Procrastination is my sin. It brings me naught but sorrow. I know that I should stop it. In fact, I will, tomorrow”",
   }, {
-    quote: "“Laziness is the first step towards efficiency.”",
-    author: "Patrick Bennett",
+    "Patrick Bennett": "“Laziness is the first step towards efficiency.”",
   }, {
-    quote: "“The production of too many useful things results in too many useless people.”",
-    author: "Karl Marx",
+    "Karl Marx": "“The production of too many useful things results in too many useless people.”",
   }, {
-    quote: "“TProgress is made by lazy men looking for easier ways to do things.”",
-    author: "Robert A. Heinlein",
+    "Robert A. Heinlein": "“Progress is made by lazy men looking for easier ways to do things.”",
   },
 ];

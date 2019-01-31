@@ -6,7 +6,7 @@ const Downloads = styled.div`
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  height: 90%;
+  height: 80%;
   @media (max-width: 600px) {
     width: 100%;
     height: 90%;
@@ -15,6 +15,7 @@ const Downloads = styled.div`
 
 const InfoElement = styled.div`
   display: flex;
+  border: 1px solid white;
   margin: 5px 10px 5px 10px;
   flex-direction: row;
   justify-content: space-between;
@@ -28,6 +29,7 @@ const InfoElement = styled.div`
 
 const Bio = styled.div`
   display: block;
+  border: 1px solid grey;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
   padding: 5px 20px 5px 20px;
@@ -53,6 +55,7 @@ const Avatar = styled.img`
 
 const Info = styled.div`
   display: flex;
+  border: 1px solid grey;
   flex-direction: column;
   justify-content: space-between;
   padding: 5px 20px 5px 20px;
@@ -64,12 +67,14 @@ const Info = styled.div`
 
 const InfoElementText = styled.span`
   font-family: 'Open Sans', sans-serif;
+  border: 1px solid yellow;
   font-size: 13px;
   font-style: italic;
   margin-bottom: 40px;
 `
 
 const Icon = styled.svg`
+  border: 1px solid white;
   align-self: center;
   flex: none;
   fill: white;
@@ -86,7 +91,12 @@ export default () => <Downloads>
   <InfoElement>
     <Bio>
       <Avatar src='https://media.licdn.com/dms/image/C4E03AQEzl61bLcJWBg/profile-displayphoto-shrink_200_200/0?e=1554336000&v=beta&t=Z0dY5zuiSfYWGLG5wFtvwiBTVqX2mqbbhJR0ag8N7is' alt='avatar'/>
-    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Dolor morbi non arcu risus quis varius quam quisque. Cursus in hac habitasse platea dictumst quisque sagittis. Scelerisque felis imperdiet proin fermentum leo vel orci porta. Malesuada pellentesque elit eget gravida cum sociis natoque. Integer eget aliquet nibh praesent tristique. Eros in cursus turpis massa. Ipsum faucibus vitae aliquet nec ullamcorper sit. Elementum eu facilisis sed odio morbi quis commodo. Nulla facilisi nullam vehicula ipsum a. Senectus et netus et malesuada fames ac turpis.</span>
+    <span>Hey, how YOU doin'?</span>
+    <span>I'm Lorenz.</span>
+    <span>This is my personal website, here you don't have to worry about cookies and your privacy!</span>
+    <span>A monkey with a MacBook and internet access.</span>
+    <span>A monkey with a MacBook and internet access.</span>
+    <span>Some call that particular combination <b>Software Engineer</b></span>
     </Bio>
       <Info>
       <Icon viewBox="0 0 100 100">
@@ -111,6 +121,8 @@ export default () => <Downloads>
     </Info>
   </InfoElement>
 </Downloads>
+
+// <iframe src="https://giphy.com/embed/3HAYjf1HlPpP7EWHJbq" width="280" height="270" frameBorder="0"></iframe>
 
 // <Icon viewBox="0 0 10 17">
 //   <path d="M5.2 4.9C5.5 3.2 6.1 1.3 6.4 0.5 6.5 0.3 6.3 0 6.1 0L5.6 0C5.2 0 4.9 0.2 4.6 0.5 3.5 2.1 0.1 7.3 0 11.7 0 11.8 0 11.9 0 11.9 0 14.8 2.4 17.2 5.3 17 7.8 16.8 9.8 14.8 10 12.3 10.1 9.9 8.6 7.8 6.5 7.1 5.6 6.8 5 5.9 5.2 4.9" />
