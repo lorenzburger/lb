@@ -6,8 +6,6 @@ export const quotes = [
   }, {
     "Debasish Mridha": "“Sometimes the most important thing to do is to do nothing.”",
   }, {
-    "Kevin Leman": "“The only way to avoid failure is to sit in a corner and do nothing.”",
-  }, {
     "Agatha Christie": "“I don't think necessity is the mother of invention. Invention arises directly from idleness, possibly also from laziness. To save oneself trouble.”",
   }, {
     "Ronald Reagan": "“I've heard that hard work never killed anyone, but I say why take the chance?”",

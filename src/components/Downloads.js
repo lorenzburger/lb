@@ -88,15 +88,12 @@ const Icon = styled.svg`
 `
 
 export default () => <Downloads>
+  <div>asdf</div>
   <InfoElement>
     <Bio>
       <Avatar src='https://media.licdn.com/dms/image/C4E03AQEzl61bLcJWBg/profile-displayphoto-shrink_200_200/0?e=1554336000&v=beta&t=Z0dY5zuiSfYWGLG5wFtvwiBTVqX2mqbbhJR0ag8N7is' alt='avatar'/>
-    <span>Hey, how YOU doin'?</span>
-    <span>I'm Lorenz.</span>
-    <span>This is my personal website, here you don't have to worry about cookies and your privacy!</span>
-    <span>A monkey with a MacBook and internet access.</span>
-    <span>A monkey with a MacBook and internet access.</span>
-    <span>Some call that particular combination <b>Software Engineer</b></span>
+
+    <span>This is my personal website.</span>
     </Bio>
       <Info>
       <Icon viewBox="0 0 100 100">

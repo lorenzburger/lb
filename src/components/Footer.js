@@ -26,6 +26,49 @@ const bounceHigher = keyframes`
   }
 `
 
+const fadeInOut = keyframes`
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+`
+
+const Bubble = styled.p`
+  opacity: ${props => props.fade ? 0.8 : 0};
+  pointer-events: ${props => props.fade ? `auto` : `none`};
+  animation: ${props => props.fade
+    ?
+      `${fadeInOut} 1.5s normal forwards ease-in-out`
+    :
+      null
+  };
+	position: absolute;
+	background: #8efa00;
+	border-radius: .4em;
+  transform: translateX(165px);
+	right: 50%;
+	top: -1.4%;
+	width: 330px;
+	height: 18px;
+	border-left-color: #8efa00;
+	border-right: 0;
+	margin-top: -30px;
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  @media (max-width: 600px) {
+    top: 5%;
+    font-size: 10px;
+    width: 280px;
+    transform: translateX(140px);
+  };
+`
+
 const Footer = styled.div`
   display: flex;
   flex-direction: row;
@@ -118,6 +161,9 @@ const StyledSocialBadge4 = styled(SocialBadge)`
 export default (props) => <Footer>
   <BackgroundImage />
     <Fader>
+      <Bubble fade={props.fade}>
+        Lorenz has been lazy, you should try again!
+      </Bubble>
       <FooterElement bump={props.bump}>
         <StyledSocialBadge1
           bump={props.bump}
