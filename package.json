@@ -5,13 +5,13 @@
   "homepage": "https://lorenzburger.github.io/lb",
   "dependencies": {
     "prop-types": "^15.7.2",
-    "react": "^15.5.4",
-    "react-dom": "^15.5.4",
+    "react": "^15.7.0",
+    "react-dom": "^15.7.0",
     "react-social-badge": "^1.0.6"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
-    "react-router-dom": "^4.1.1",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "0.9.5",
     "styled-components": "^1.4.6"
   },
