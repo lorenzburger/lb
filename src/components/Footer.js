@@ -188,7 +188,7 @@ export default (props) => <Footer>
           iconColor='white'
           badgeColor='transparent'
           icon='envelope-square'
-          url='mailto:john@example.com'
+          url='mailto:lorenzburger@arcor.de'
         />
       </FooterElement>
     </Fader>

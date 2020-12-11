@@ -29,6 +29,7 @@ const BackgroundImage = styled.div`
 `
 
 const Burger = styled(Link)`
+  font-family: 'Rubik', sans-serif;
   padding-bottom: 10px;
   padding-top: 10px;
   padding-left: 5%;
@@ -54,6 +55,7 @@ const Menu = styled.div`
 `
 
 const Projects = styled(Link)`
+  font-family: 'Rubik', sans-serif;
   color: white;
   font-weight: bold;
   text-decoration: none;
